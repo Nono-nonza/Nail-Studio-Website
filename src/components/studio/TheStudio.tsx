@@ -12,7 +12,7 @@ export function TheStudio() {
         />
 
         <div>
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-brand-terracotta">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-terracotta-ink">
             The Studio
           </p>
           <h2 className="font-display text-3xl font-semibold text-brand-brown sm:text-4xl">

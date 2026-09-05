@@ -56,7 +56,7 @@ export function FAQList({ groups }: { groups: FAQGroup[] }) {
                         {item.link ? (
                           <Link
                             href={item.link.href}
-                            className="mt-2 block font-medium text-brand-terracotta hover:underline"
+                            className="mt-2 block font-medium text-terracotta-ink hover:underline"
                           >
                             {item.link.label} &rarr;
                           </Link>

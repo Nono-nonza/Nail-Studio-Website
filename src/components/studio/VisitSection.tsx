@@ -17,7 +17,7 @@ export function VisitSection() {
   return (
     <section className="bg-surface py-20 sm:py-28">
       <Container className="mx-auto max-w-2xl text-center">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-brand-terracotta">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-terracotta-ink">
           Visit &amp; Book
         </p>
         <h2 className="font-display text-3xl font-semibold text-brand-brown sm:text-4xl">

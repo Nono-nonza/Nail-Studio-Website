@@ -13,28 +13,28 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border-subtle bg-surface/90 backdrop-blur">
       <Container className="relative flex h-[72px] items-center justify-between">
         <Link href="/" className="flex flex-col leading-tight">
-          <span className="font-display text-xl font-semibold text-brand-brown">
+          <span className="whitespace-nowrap font-display text-xl font-semibold text-brand-brown">
             {business.name}
           </span>
-          <span className="text-[11px] uppercase tracking-[0.2em] text-brand-terracotta">
+          <span className="text-[11px] uppercase tracking-[0.2em] text-terracotta-ink">
             {business.tagline}
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 min-[1100px]:flex">
           {primaryNav.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-brand-brown/80 transition-colors hover:text-brand-brown"
+              className="whitespace-nowrap text-sm font-medium text-brand-brown/80 transition-colors hover:text-brand-brown"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden md:block">
-          <WhatsAppButton internationalNumber={primaryWhatsApp} className="px-5 py-2.5 text-xs">
+        <div className="hidden min-[1100px]:block">
+          <WhatsAppButton internationalNumber={primaryWhatsApp} className="whitespace-nowrap px-5 py-2.5 text-xs">
             Book Now
           </WhatsAppButton>
         </div>

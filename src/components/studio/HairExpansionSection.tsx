@@ -21,7 +21,7 @@ export function HairExpansionSection() {
               className="flex items-baseline justify-between gap-4 border-b border-brand-brown/10 py-3.5"
             >
               <span className="text-sm text-brand-brown sm:text-base">{service.name}</span>
-              <span className="whitespace-nowrap font-display text-base font-semibold text-brand-terracotta">
+              <span className="whitespace-nowrap font-display text-base font-semibold text-terracotta-ink">
                 {service.priceLabel}
               </span>
             </div>

@@ -13,7 +13,7 @@ export function AboutTeaser() {
         />
 
         <div>
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-brand-terracotta">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-terracotta-ink">
             About Us
           </p>
           <h2 className="font-display text-3xl font-semibold text-brand-brown sm:text-4xl">

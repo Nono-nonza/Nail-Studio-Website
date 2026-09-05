@@ -42,7 +42,7 @@ export function ServicePriceSection({
                   <p className="mt-1 text-xs text-muted-foreground">{service.description}</p>
                 ) : null}
               </div>
-              <span className="whitespace-nowrap font-display text-lg font-semibold text-brand-terracotta">
+              <span className="whitespace-nowrap font-display text-lg font-semibold text-terracotta-ink">
                 {service.priceLabel}
               </span>
             </div>

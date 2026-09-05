@@ -15,15 +15,27 @@
   --color-olive: #776f4d;
   --color-brown: #5d4527;
 
+  /*
+   * Accessible derivatives of the locked brand swatches above, used only
+   * where text needs to meet WCAG AA contrast (4.5:1) — the original
+   * swatches stay unchanged for decorative/background use (icon washes,
+   * blobs, etc.) where the softer 3:1 non-text threshold applies.
+   */
+  --color-olive-ink: #686143; /* muted body text on cream: 4.57:1 (was 3.71:1) */
+  --color-terracotta-ink: #855543; /* eyebrow/accent text on cream: 4.57:1 (was 2.52:1) */
+  --color-sage-cta: #6f7859; /* primary button bg w/ white text: 4.66:1 (was 3.18:1) */
+  --color-sage-cta-hover: #5c644a; /* primary button hover: 6.22:1 */
+  --color-terracotta-cta: #a36852; /* secondary button bg w/ white text: 4.51:1 (was 3.42:1) */
+
   --background: var(--color-cream);
   --foreground: var(--color-brown);
   --surface: #ffffff;
   --surface-muted: var(--color-sand);
-  --primary: var(--color-sage);
+  --primary: var(--color-sage-cta);
   --primary-foreground: #ffffff;
-  --accent: var(--color-terracotta);
+  --accent: var(--color-terracotta-cta);
   --accent-foreground: #ffffff;
-  --muted-foreground: var(--color-olive);
+  --muted-foreground: var(--color-olive-ink);
   --border-subtle: color-mix(in srgb, var(--color-brown) 15%, transparent);
 }
 
@@ -47,6 +59,8 @@
   --color-brand-terracotta: var(--color-terracotta);
   --color-brand-olive: var(--color-olive);
   --color-brand-brown: var(--color-brown);
+  --color-terracotta-ink: var(--color-terracotta-ink);
+  --color-sage-cta-hover: var(--color-sage-cta-hover);
 
   --font-sans: var(--font-body);
   --font-display: var(--font-display);

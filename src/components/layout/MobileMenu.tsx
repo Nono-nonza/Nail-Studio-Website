@@ -10,7 +10,7 @@ export function MobileMenu({ links }: { links: NavLink[] }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="md:hidden">
+    <div className="min-[1100px]:hidden">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}

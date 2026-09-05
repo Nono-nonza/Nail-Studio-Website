@@ -8,7 +8,7 @@ function ServiceRow({ service }: { service: Service }) {
   return (
     <li className="flex items-baseline justify-between gap-4 border-b border-border-subtle py-3.5 last:border-none">
       <span className="text-sm text-brand-brown sm:text-base">{service.name}</span>
-      <span className="whitespace-nowrap font-display text-base font-semibold text-brand-terracotta sm:text-lg">
+      <span className="whitespace-nowrap font-display text-base font-semibold text-terracotta-ink sm:text-lg">
         {service.priceLabel}
       </span>
     </li>

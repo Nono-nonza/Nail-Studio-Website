@@ -47,7 +47,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-terracotta">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta-ink">
             Explore
           </p>
           <ul className="mt-4 space-y-2">
@@ -65,7 +65,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-terracotta">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-terracotta-ink">
             Visit Us
           </p>
           <ul className="mt-4 space-y-2 text-sm text-brand-brown/80">

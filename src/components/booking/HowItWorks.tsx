@@ -36,7 +36,7 @@ export function HowItWorks() {
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-brand-sage-light/30 text-brand-sage">
                 <Icon className="h-5 w-5" aria-hidden />
               </div>
-              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-brand-terracotta">
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-terracotta-ink">
                 Step {index + 1}
               </p>
               <h3 className="mt-2 font-display text-lg font-semibold text-brand-brown">

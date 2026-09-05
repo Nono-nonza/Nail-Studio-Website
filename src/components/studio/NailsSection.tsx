@@ -21,7 +21,7 @@ export function NailsSection() {
               className="flex items-baseline justify-between gap-4 border-b border-border-subtle py-3.5"
             >
               <span className="text-sm text-brand-brown sm:text-base">{service.name}</span>
-              <span className="whitespace-nowrap font-display text-base font-semibold text-brand-terracotta">
+              <span className="whitespace-nowrap font-display text-base font-semibold text-terracotta-ink">
                 {service.priceLabel}
               </span>
             </div>
