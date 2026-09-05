@@ -1,5 +1,5 @@
 import { MapPin } from "lucide-react";
-import { mainLocation } from "@/data/locations";
+import { extensionLocation, mainLocation } from "@/data/locations";
 import { TBD } from "@/data/types";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -30,20 +30,26 @@ export function VisitSection() {
         </div>
 
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-          Hair services are available through our expanded studio — if you&apos;re booking a hair
-          service, we&apos;ll confirm the exact location with you directly.
+          Hair services are available through our expanded studio — message the hair services
+          number below to arrange your visit.
         </p>
 
         <div className="mx-auto mt-8 max-w-xs text-left">
           <OpeningHours hours={mainLocation.openingHours} />
         </div>
 
-        <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+        <div className="mt-10 flex justify-center">
           <Button href="/booking" variant="primary">
             Request a Booking
           </Button>
+        </div>
+
+        <div className="mt-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <WhatsAppButton internationalNumber={mainLocation.whatsapp.internationalNumber} variant="outline">
-            Message Us on WhatsApp
+            Nail Services WhatsApp
+          </WhatsAppButton>
+          <WhatsAppButton internationalNumber={extensionLocation.whatsapp.internationalNumber} variant="outline">
+            Hair Services WhatsApp
           </WhatsAppButton>
         </div>
       </Container>

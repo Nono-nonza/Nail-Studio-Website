@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { MapPin, Phone } from "lucide-react";
+import { Clock, MapPin, Phone } from "lucide-react";
 import { business } from "@/data/business";
 import { legalNav, primaryNav, socialLinks } from "@/data/site";
-import { mainLocation } from "@/data/locations";
+import { extensionLocation, mainLocation } from "@/data/locations";
 import { TBD } from "@/data/types";
 import { Container } from "@/components/ui/Container";
 import { FacebookIcon, InstagramIcon, TikTokIcon } from "@/components/ui/SocialIcons";
@@ -74,17 +74,33 @@ export function SiteFooter() {
               <span>
                 {mainLocation.address.line1 === TBD
                   ? "Address to be confirmed"
-                  : `${mainLocation.address.line1}, ${mainLocation.address.city}`}
+                  : [mainLocation.address.line1, mainLocation.address.suburb, mainLocation.address.city]
+                      .filter(Boolean)
+                      .join(", ")}
               </span>
             </li>
             <li className="flex gap-2">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand-sage" />
               <span>
                 {mainLocation.whatsapp.displayNumber === TBD
-                  ? "WhatsApp number to be confirmed"
-                  : mainLocation.whatsapp.displayNumber}
+                  ? "Nail services WhatsApp to be confirmed"
+                  : `Nail Services: ${mainLocation.whatsapp.displayNumber}`}
               </span>
             </li>
+            <li className="flex gap-2">
+              <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand-sage" />
+              <span>
+                {extensionLocation.whatsapp.displayNumber === TBD
+                  ? "Hair services WhatsApp to be confirmed"
+                  : `Hair Services: ${extensionLocation.whatsapp.displayNumber}`}
+              </span>
+            </li>
+            {mainLocation.openingHoursSummary && mainLocation.openingHoursSummary !== TBD ? (
+              <li className="flex gap-2">
+                <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-sage" />
+                <span>{mainLocation.openingHoursSummary}</span>
+              </li>
+            ) : null}
           </ul>
         </div>
       </Container>

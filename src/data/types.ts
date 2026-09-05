@@ -38,7 +38,15 @@ export interface WhatsAppContact {
 }
 
 export interface DayHours {
-  day: "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
+  day:
+    | "Monday"
+    | "Tuesday"
+    | "Wednesday"
+    | "Thursday"
+    | "Friday"
+    | "Saturday"
+    | "Sunday"
+    | "Public Holidays";
   /** e.g. "09:00 - 17:00", "Closed", or TBD. */
   hours: Maybe<string>;
 }
@@ -59,6 +67,8 @@ export interface StudioLocation {
   whatsapp: WhatsAppContact;
   phone?: Maybe<string>;
   openingHours: DayHours[];
+  /** Compact one-line summary for tight spaces (e.g. the footer). Keep in sync with `openingHours`. */
+  openingHoursSummary?: Maybe<string>;
   heroImage?: StudioImage;
   gallery: StudioImage[];
 }

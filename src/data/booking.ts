@@ -1,6 +1,6 @@
 /**
  * Booking is a request-only flow: the form composes a WhatsApp message and
- * hands the customer to the correct studio's WhatsApp number. There is no
+ * sends the customer to The Nail Studio's WhatsApp number. There is no
  * live availability check and no payment processing.
  *
  * `depositsEnabled` and `paymentsEnabled` are placeholders for later stages —
@@ -10,6 +10,14 @@
 export const bookingConfig = {
   depositsEnabled: false,
   paymentsEnabled: false,
+  /** Confirmed: customers can request a booking up to this many days ahead. */
+  maxAdvanceBookingDays: 30,
+  /** Confirmed cancellation/rescheduling notice period, in hours. */
+  cancellationNoticeHours: 24,
+  /** Confirmed grace period for late arrivals, in minutes. */
+  gracePeriodMinutes: 15,
+  /** Confirmed no-show policy statement. */
+  noShowPolicy: "A no-show is treated as a cancelled appointment.",
   /** Selectable time-of-day options shown in the booking form. Purely a UI
    * convenience for the request message — not a claim of real availability.
    * Adjust once opening hours are confirmed. */
@@ -33,5 +41,5 @@ export const bookingConfig = {
     "17:00",
   ],
   disclaimer:
-    "This form sends a booking request via WhatsApp — it does not confirm a live appointment slot. The studio will reply to confirm your booking.",
+    "This form sends a booking request via WhatsApp — it does not confirm a live appointment slot. The Nail Studio will reply to confirm your booking.",
 };

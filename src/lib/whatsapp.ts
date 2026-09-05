@@ -18,7 +18,6 @@ export function buildWhatsAppLink(
 }
 
 interface BookingWhatsAppMessageInput {
-  studioName: string;
   serviceName: string;
   date: string;
   time: string;
@@ -29,7 +28,6 @@ interface BookingWhatsAppMessageInput {
 
 /** Composes the plain-text WhatsApp message sent for a booking request. */
 export function buildBookingMessage({
-  studioName,
   serviceName,
   date,
   time,
@@ -40,7 +38,6 @@ export function buildBookingMessage({
   const lines = [
     "Hi! I'd like to request a booking at The Nail Studio.",
     "",
-    `Studio: ${studioName}`,
     `Service: ${serviceName}`,
     `Preferred date: ${date}`,
     `Preferred time: ${time}`,

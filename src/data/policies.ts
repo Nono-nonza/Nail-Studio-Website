@@ -18,7 +18,10 @@ export const policies = {
     title: "Booking & Cancellation Policy",
     lastUpdated: TBD,
     content: [
-      "Our booking and cancellation policy — including any deposit requirements — is being finalised and will appear here shortly.",
+      "Booking requests can be made up to 30 days in advance.",
+      "Cancellations or rescheduling require at least 24 hours' notice.",
+      "A 15-minute grace period is allowed for late arrivals.",
+      "A no-show is treated as a cancelled appointment.",
     ],
   },
   privacy: {
