@@ -8,6 +8,7 @@ export const primaryNav: NavLink[] = [
   { label: "Gallery", href: "/gallery" },
   { label: "Booking", href: "/booking" },
   { label: "Contact", href: "/contact" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 export const legalNav: NavLink[] = [
