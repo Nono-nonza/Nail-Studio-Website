@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/*
+ * The Nail Studio — brand palette (locked, confirmed by client).
+ * Named by role rather than raw hue so components read as intent,
+ * not colour codes. Keep this list as the single source of truth.
+ */
+:root {
+  --color-cream: #e7dbd1;
+  --color-sand: #d2c1ac;
+  --color-blush: #cda08c;
+  --color-sage-light: #a8b38f;
+  --color-sage: #8a956f;
+  --color-terracotta: #b47e6a;
+  --color-olive: #776f4d;
+  --color-brown: #5d4527;
+
+  --background: var(--color-cream);
+  --foreground: var(--color-brown);
+  --surface: #ffffff;
+  --surface-muted: var(--color-sand);
+  --primary: var(--color-sage);
+  --primary-foreground: #ffffff;
+  --accent: var(--color-terracotta);
+  --accent-foreground: #ffffff;
+  --muted-foreground: var(--color-olive);
+  --border-subtle: color-mix(in srgb, var(--color-brown) 15%, transparent);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border-subtle: var(--border-subtle);
+
+  --color-brand-cream: var(--color-cream);
+  --color-brand-sand: var(--color-sand);
+  --color-brand-blush: var(--color-blush);
+  --color-brand-sage-light: var(--color-sage-light);
+  --color-brand-sage: var(--color-sage);
+  --color-brand-terracotta: var(--color-terracotta);
+  --color-brand-olive: var(--color-olive);
+  --color-brand-brown: var(--color-brown);
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+/* This is a light, warm brand by design — intentionally no dark-mode override. */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+::selection {
+  background: var(--color-sage-light);
+  color: #ffffff;
+}
