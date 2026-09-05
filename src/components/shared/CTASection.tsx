@@ -9,8 +9,8 @@ export function CTASection() {
           Ready to book your next appointment?
         </h2>
         <p className="max-w-md text-sm leading-relaxed text-brand-cream/80 sm:text-base">
-          Send a booking request in under a minute — choose your studio, service and preferred
-          time, and we&apos;ll confirm with you on WhatsApp.
+          Send a booking request in under a minute — choose your service and preferred time, and
+          we&apos;ll confirm with you on WhatsApp.
         </p>
         <Button href="/booking" variant="secondary">
           Request a Booking

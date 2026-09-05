@@ -9,7 +9,7 @@ export const business = {
   owner: "Zanele Nkosi",
   tagline: "Elegant nails & hair, beautifully done",
   description:
-    "The Nail Studio offers premium nail care and select hair services across two studios in South Africa, blending elegant styling with a warm, personal touch.",
+    "The Nail Studio offers premium nail care at its core, with hair services now available through its expanded studio, blending elegant styling with a warm, personal touch.",
   currency: "ZAR",
   currencySymbol: "R",
   country: "South Africa",

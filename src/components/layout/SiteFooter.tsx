@@ -2,7 +2,7 @@ import Link from "next/link";
 import { MapPin, Phone } from "lucide-react";
 import { business } from "@/data/business";
 import { legalNav, primaryNav, socialLinks } from "@/data/site";
-import { studios } from "@/data/studios";
+import { mainLocation } from "@/data/locations";
 import { TBD } from "@/data/types";
 import { Container } from "@/components/ui/Container";
 import { FacebookIcon, InstagramIcon, TikTokIcon } from "@/components/ui/SocialIcons";
@@ -19,7 +19,7 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t border-border-subtle bg-brand-cream">
-      <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+      <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-3">
         <div>
           <p className="font-display text-lg font-semibold text-brand-brown">{business.name}</p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
@@ -64,31 +64,29 @@ export function SiteFooter() {
           </ul>
         </div>
 
-        {studios.map((studio) => (
-          <div key={studio.id}>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-terracotta">
-              {studio.shortName}
-            </p>
-            <ul className="mt-4 space-y-2 text-sm text-brand-brown/80">
-              <li className="flex gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-sage" />
-                <span>
-                  {studio.address.line1 === TBD
-                    ? "Address to be confirmed"
-                    : `${studio.address.line1}, ${studio.address.city}`}
-                </span>
-              </li>
-              <li className="flex gap-2">
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand-sage" />
-                <span>
-                  {studio.whatsapp.displayNumber === TBD
-                    ? "WhatsApp number to be confirmed"
-                    : studio.whatsapp.displayNumber}
-                </span>
-              </li>
-            </ul>
-          </div>
-        ))}
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-terracotta">
+            Visit Us
+          </p>
+          <ul className="mt-4 space-y-2 text-sm text-brand-brown/80">
+            <li className="flex gap-2">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-sage" />
+              <span>
+                {mainLocation.address.line1 === TBD
+                  ? "Address to be confirmed"
+                  : `${mainLocation.address.line1}, ${mainLocation.address.city}`}
+              </span>
+            </li>
+            <li className="flex gap-2">
+              <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand-sage" />
+              <span>
+                {mainLocation.whatsapp.displayNumber === TBD
+                  ? "WhatsApp number to be confirmed"
+                  : mainLocation.whatsapp.displayNumber}
+              </span>
+            </li>
+          </ul>
+        </div>
       </Container>
 
       <div className="border-t border-border-subtle">

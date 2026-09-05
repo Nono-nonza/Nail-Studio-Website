@@ -1,6 +1,6 @@
 export * from "./types";
 export * from "./business";
-export * from "./studios";
+export * from "./locations";
 export * from "./services";
 export * from "./gallery";
 export * from "./site";

@@ -7,7 +7,7 @@ import { CTASection } from "@/components/shared/CTASection";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet The Nail Studio, owned and run by Zanele Nkosi — elegant, personal nail and hair care across two studios in South Africa.",
+    "Meet The Nail Studio, owned and run by Zanele Nkosi — elegant, personal nail care at its core, with hair services now available through our expanded studio.",
 };
 
 export default function AboutPage() {

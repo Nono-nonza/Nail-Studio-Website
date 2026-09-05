@@ -22,7 +22,7 @@ export function ServicesTeaser() {
         <SectionHeading
           eyebrow="Services & Prices"
           title="Simple, transparent pricing"
-          subtitle="All prices in South African Rand (ZAR). Nail services are offered at both studios; hair services are available at Studio 2."
+          subtitle="All prices in South African Rand (ZAR). Nail services are core to The Nail Studio; hair services are available through our expanded studio."
         />
 
         <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:gap-16">
@@ -37,8 +37,9 @@ export function ServicesTeaser() {
 
           <div className="rounded-3xl bg-surface p-8 shadow-sm shadow-brand-brown/5">
             <h3 className="font-display text-xl font-semibold text-brand-brown">
-              Hair Services <span className="text-sm font-normal text-muted-foreground">(Studio 2)</span>
+              Hair Services
             </h3>
+            <p className="mt-1 text-xs text-muted-foreground">Available through our expanded studio.</p>
             <ul className="mt-2">
               {hairServices.map((service) => (
                 <ServiceRow key={service.id} service={service} />

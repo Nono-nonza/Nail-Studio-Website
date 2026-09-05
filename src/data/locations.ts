@@ -1,21 +1,26 @@
-import { Studio, TBD } from "./types";
+import { StudioLocation, TBD } from "./types";
 
 /**
- * The Nail Studio's two physical locations.
+ * The Nail Studio's physical locations.
+ *
+ * IMPORTANT: The Nail Studio is one business, one brand, owned by Zanele
+ * Nkosi. These two entries exist only so internal/booking logic can track
+ * where a service is performed — they must never be presented publicly as
+ * "Studio 1" / "Studio 2" or as separate, independently branded studios.
+ * The public site should read as one established studio that has expanded
+ * to offer hair services alongside its core nail services.
  *
  * Addresses, WhatsApp numbers, opening hours, and photos are marked TBD
  * where the client hasn't confirmed final details yet — replace those
  * values as soon as they're available. Nothing here is invented.
  */
-export const studios: Studio[] = [
+export const locations: StudioLocation[] = [
   {
-    id: "studio-1",
-    name: "The Nail Studio — Studio 1",
-    shortName: "Studio 1",
-    tagline: "Nail services",
+    id: "main",
+    internalLabel: "Main location (internal reference only)",
     description:
-      "Our first studio, dedicated entirely to nail care — manicures, pedicures, acrylics, gels and nail art.",
-    services: ["nails"],
+      "The established home of The Nail Studio, offering our full range of nail services.",
+    offersHairServices: false,
     address: {
       line1: TBD,
       city: TBD,
@@ -40,13 +45,11 @@ export const studios: Studio[] = [
     gallery: [],
   },
   {
-    id: "studio-2",
-    name: "The Nail Studio — Studio 2",
-    shortName: "Studio 2",
-    tagline: "Nail & hair services",
+    id: "extension",
+    internalLabel: "Expanded location (internal reference only)",
     description:
-      "Our second studio, offering the full range of nail services alongside wig care, styling and haircuts.",
-    services: ["nails", "hair"],
+      "Our expanded studio, offering the same nail services plus hair services — wig care, styling and haircuts.",
+    offersHairServices: true,
     address: {
       line1: TBD,
       city: TBD,
@@ -72,4 +75,7 @@ export const studios: Studio[] = [
   },
 ];
 
-export const getStudioById = (id: string) => studios.find((s) => s.id === id);
+export const mainLocation = locations[0];
+export const extensionLocation = locations[1];
+
+export const getLocationById = (id: string) => locations.find((l) => l.id === id);

@@ -17,9 +17,9 @@ const values = [
   },
   {
     icon: Building2,
-    title: "Two Studios, One Standard",
+    title: "One Studio, Growing With You",
     description:
-      "Studio 1 focuses on nails; Studio 2 offers nails and hair — both held to the same standard of care.",
+      "Nail care remains at the heart of what we do. We've expanded to offer hair services too — all to the same standard of care.",
   },
   {
     icon: MessageCircle,

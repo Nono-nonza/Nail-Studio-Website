@@ -3,7 +3,14 @@
  * Keep all business/content types here so data files stay easy to scan and edit.
  */
 
-export type StudioId = "studio-1" | "studio-2";
+/**
+ * The Nail Studio is one business, one brand. Internally it operates from
+ * two physical locations — the main location (nails) and an expanded
+ * location (nails + hair) — but this is never surfaced publicly as "two
+ * studios" or two brands. `LocationId` exists only so booking/service data
+ * can track which physical location performs a given service.
+ */
+export type LocationId = "main" | "extension";
 
 export type ServiceCategory = "nails" | "hair";
 
@@ -41,13 +48,13 @@ export interface StudioImage {
   alt: string;
 }
 
-export interface Studio {
-  id: StudioId;
-  name: string;
-  shortName: string;
-  tagline: string;
+export interface StudioLocation {
+  id: LocationId;
+  /** Internal reference label for developers/admin only — never rendered as a separate studio/brand name on the public site. */
+  internalLabel: string;
   description: string;
-  services: ServiceCategory[];
+  /** Nail services are offered at every location; this flags the location(s) that also offer hair services. */
+  offersHairServices: boolean;
   address: Address;
   whatsapp: WhatsAppContact;
   phone?: Maybe<string>;
@@ -67,8 +74,8 @@ export interface Service {
   /** Always-correct display string, e.g. "R180" or "R15 per nail". */
   priceLabel: string;
   description?: string;
-  /** Which studios currently offer this service. */
-  availableAt: StudioId[];
+  /** Which location(s) currently perform this service — an internal/booking detail, not a public "choose your studio" split. */
+  availableAt: LocationId[];
 }
 
 export interface GalleryImage {
@@ -76,7 +83,7 @@ export interface GalleryImage {
   src: string;
   alt: string;
   category: ServiceCategory | "studio";
-  studioId?: StudioId;
+  locationId?: LocationId;
 }
 
 export interface NavLink {

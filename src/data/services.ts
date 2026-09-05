@@ -3,9 +3,11 @@ import { Service } from "./types";
 /**
  * All confirmed services and prices, in South African Rand (ZAR).
  *
- * `availableAt` controls which studio(s) a service shows up under.
- * Nail services are offered at both studios; hair services are offered
- * only at Studio 2. Update prices here and they update everywhere on the site.
+ * `availableAt` is an internal/booking detail only — it is never used to
+ * present The Nail Studio as two separate studios. Nail services are
+ * offered throughout The Nail Studio; hair services are offered through
+ * our expanded studio. Update prices here and they update everywhere on
+ * the site.
  */
 export const nailServices: Service[] = [
   {
@@ -14,7 +16,7 @@ export const nailServices: Service[] = [
     category: "nails",
     price: 180,
     priceLabel: "R180",
-    availableAt: ["studio-1", "studio-2"],
+    availableAt: ["main", "extension"],
   },
   {
     id: "pedicure",
@@ -22,7 +24,7 @@ export const nailServices: Service[] = [
     category: "nails",
     price: 230,
     priceLabel: "R230",
-    availableAt: ["studio-1", "studio-2"],
+    availableAt: ["main", "extension"],
   },
   {
     id: "acrylic-full-set",
@@ -30,7 +32,7 @@ export const nailServices: Service[] = [
     category: "nails",
     price: 280,
     priceLabel: "R280",
-    availableAt: ["studio-1", "studio-2"],
+    availableAt: ["main", "extension"],
   },
   {
     id: "gel-nails",
@@ -38,7 +40,7 @@ export const nailServices: Service[] = [
     category: "nails",
     price: 230,
     priceLabel: "R230",
-    availableAt: ["studio-1", "studio-2"],
+    availableAt: ["main", "extension"],
   },
   {
     id: "nail-art",
@@ -47,7 +49,7 @@ export const nailServices: Service[] = [
     price: 15,
     priceUnit: "per nail",
     priceLabel: "R15 per nail",
-    availableAt: ["studio-1", "studio-2"],
+    availableAt: ["main", "extension"],
   },
   {
     id: "nail-removal",
@@ -55,7 +57,7 @@ export const nailServices: Service[] = [
     category: "nails",
     price: 100,
     priceLabel: "R100",
-    availableAt: ["studio-1", "studio-2"],
+    availableAt: ["main", "extension"],
   },
   {
     id: "nail-removal-new-set",
@@ -64,7 +66,7 @@ export const nailServices: Service[] = [
     price: 50,
     priceLabel: "R50",
     description: "Removal price when booked together with a new set.",
-    availableAt: ["studio-1", "studio-2"],
+    availableAt: ["main", "extension"],
   },
   {
     id: "buff-and-shine",
@@ -72,7 +74,7 @@ export const nailServices: Service[] = [
     category: "nails",
     price: 130,
     priceLabel: "R130",
-    availableAt: ["studio-1", "studio-2"],
+    availableAt: ["main", "extension"],
   },
 ];
 
@@ -83,7 +85,7 @@ export const hairServices: Service[] = [
     category: "hair",
     price: 250,
     priceLabel: "R250",
-    availableAt: ["studio-2"],
+    availableAt: ["extension"],
   },
   {
     id: "wig-styling",
@@ -91,7 +93,7 @@ export const hairServices: Service[] = [
     category: "hair",
     price: 250,
     priceLabel: "R250",
-    availableAt: ["studio-2"],
+    availableAt: ["extension"],
   },
   {
     id: "wig-styling-with-wash",
@@ -99,7 +101,7 @@ export const hairServices: Service[] = [
     category: "hair",
     price: 350,
     priceLabel: "R350",
-    availableAt: ["studio-2"],
+    availableAt: ["extension"],
   },
   {
     id: "haircut",
@@ -107,7 +109,7 @@ export const hairServices: Service[] = [
     category: "hair",
     price: 100,
     priceLabel: "R100",
-    availableAt: ["studio-2"],
+    availableAt: ["extension"],
   },
   {
     id: "dye",
@@ -115,14 +117,14 @@ export const hairServices: Service[] = [
     category: "hair",
     price: 150,
     priceLabel: "R150",
-    availableAt: ["studio-2"],
+    availableAt: ["extension"],
   },
 ];
 
 export const allServices: Service[] = [...nailServices, ...hairServices];
 
-export const getServicesForStudio = (studioId: string) =>
-  allServices.filter((service) => service.availableAt.includes(studioId as never));
+export const getServicesForLocation = (locationId: string) =>
+  allServices.filter((service) => service.availableAt.includes(locationId as never));
 
 /**
  * Services currently NOT offered. Kept here (rather than deleted) so it's

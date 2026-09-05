@@ -3,7 +3,7 @@ import { NavLink, SocialLink, TBD } from "./types";
 export const primaryNav: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Our Studios", href: "/our-studios" },
+  { label: "Our Studio", href: "/our-studios" },
   { label: "Services", href: "/services" },
   { label: "Gallery", href: "/gallery" },
   { label: "Booking", href: "/booking" },
@@ -24,10 +24,10 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const seo = {
-  defaultTitle: "The Nail Studio | Nail & Hair Studios in South Africa",
+  defaultTitle: "The Nail Studio | Nail & Hair Care in South Africa",
   titleTemplate: "%s | The Nail Studio",
   defaultDescription:
-    "The Nail Studio offers elegant manicures, pedicures, acrylics, gel nails, nail art and select hair services across two studios in South Africa. Book your visit via WhatsApp.",
+    "The Nail Studio offers elegant manicures, pedicures, acrylics, gel nails, nail art and, through our expanded studio, select hair services. Book your visit via WhatsApp.",
   /** Set once the site has a production domain. */
   siteUrl: TBD,
 };

@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { business } from "@/data/business";
 import { primaryNav } from "@/data/site";
-import { studios } from "@/data/studios";
+import { mainLocation } from "@/data/locations";
 import { Container } from "@/components/ui/Container";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { MobileMenu } from "./MobileMenu";
 
 export function SiteHeader() {
-  const primaryWhatsApp = studios[0]?.whatsapp.internationalNumber;
+  const primaryWhatsApp = mainLocation.whatsapp.internationalNumber;
 
   return (
     <header className="sticky top-0 z-50 border-b border-border-subtle bg-surface/90 backdrop-blur">

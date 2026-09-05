@@ -1,5 +1,4 @@
 import { business } from "@/data/business";
-import { studios } from "@/data/studios";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
@@ -17,7 +16,7 @@ export function Hero() {
       />
 
       <Container className="relative flex flex-col items-center gap-8 py-20 text-center sm:py-28">
-        <Badge>Two studios &middot; {studios.length} locations across South Africa</Badge>
+        <Badge>Nails &amp; Hair, All in One Studio</Badge>
 
         <h1 className="max-w-3xl font-display text-4xl font-semibold leading-[1.1] text-brand-brown sm:text-5xl lg:text-6xl">
           Elegant nails &amp; hair, beautifully done
