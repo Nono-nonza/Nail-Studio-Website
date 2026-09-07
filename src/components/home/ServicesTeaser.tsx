@@ -1,4 +1,4 @@
-import { hairServices, nailServices } from "@/data/services";
+import { hairServices, lashServices, nailServices } from "@/data/services";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
@@ -22,11 +22,11 @@ export function ServicesTeaser() {
         <SectionHeading
           eyebrow="Services & Prices"
           title="Simple, transparent pricing"
-          subtitle="All prices in South African Rand (ZAR). Nail services are core to The Nail Studio; hair services are available through our expanded studio."
+          subtitle="All prices in South African Rand (ZAR). Nail services are core to The Nail Studio; hair and lash services are available through our expanded studio."
         />
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="rounded-3xl bg-surface p-8 shadow-sm shadow-brand-brown/5">
+        <div className="mt-14 grid gap-10 lg:grid-cols-3 lg:gap-10">
+          <div className="shadow-clay rounded-3xl bg-gradient-to-br from-surface to-brand-cream/30 p-8">
             <h3 className="font-display text-xl font-semibold text-brand-brown">Nail Services</h3>
             <ul className="mt-2">
               {nailServices.map((service) => (
@@ -35,13 +35,25 @@ export function ServicesTeaser() {
             </ul>
           </div>
 
-          <div className="rounded-3xl bg-surface p-8 shadow-sm shadow-brand-brown/5">
+          <div className="shadow-clay rounded-3xl bg-gradient-to-br from-surface to-brand-cream/30 p-8">
             <h3 className="font-display text-xl font-semibold text-brand-brown">
               Hair Services
             </h3>
             <p className="mt-1 text-xs text-muted-foreground">Available through our expanded studio.</p>
             <ul className="mt-2">
               {hairServices.map((service) => (
+                <ServiceRow key={service.id} service={service} />
+              ))}
+            </ul>
+          </div>
+
+          <div className="shadow-clay rounded-3xl bg-gradient-to-br from-surface to-brand-cream/30 p-8">
+            <h3 className="font-display text-xl font-semibold text-brand-brown">
+              Lash Services
+            </h3>
+            <p className="mt-1 text-xs text-muted-foreground">Available through our expanded studio.</p>
+            <ul className="mt-2">
+              {lashServices.map((service) => (
                 <ServiceRow key={service.id} service={service} />
               ))}
             </ul>

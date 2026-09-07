@@ -12,7 +12,7 @@
  */
 export type LocationId = "main" | "extension";
 
-export type ServiceCategory = "nails" | "hair";
+export type ServiceCategory = "nails" | "hair" | "lashes";
 
 /** Marks a value that is a real placeholder awaiting client confirmation. */
 export const TBD = "TBD" as const;

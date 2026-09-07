@@ -139,7 +139,50 @@ export const hairServices: Service[] = [
   },
 ];
 
-export const allServices: Service[] = [...nailServices, ...hairServices];
+export const lashServices: Service[] = [
+  {
+    id: "classic-lash-extensions",
+    name: "Classic Lash Extensions",
+    category: "lashes",
+    price: 350,
+    priceLabel: "R350",
+    availableAt: ["extension"],
+  },
+  {
+    id: "volume-lashes",
+    name: "Volume Lashes",
+    category: "lashes",
+    price: 550,
+    priceLabel: "R550",
+    availableAt: ["extension"],
+  },
+  {
+    id: "hybrid-lashes",
+    name: "Hybrid Lashes",
+    category: "lashes",
+    price: 450,
+    priceLabel: "R450",
+    availableAt: ["extension"],
+  },
+  {
+    id: "lash-removal",
+    name: "Lash Removal",
+    category: "lashes",
+    price: 100,
+    priceLabel: "R100",
+    availableAt: ["extension"],
+  },
+  {
+    id: "cluster-lashes",
+    name: "Cluster Lashes",
+    category: "lashes",
+    price: 250,
+    priceLabel: "R250",
+    availableAt: ["extension"],
+  },
+];
+
+export const allServices: Service[] = [...nailServices, ...hairServices, ...lashServices];
 
 export const getServicesForLocation = (locationId: string) =>
   allServices.filter((service) => service.availableAt.includes(locationId as never));
@@ -147,9 +190,11 @@ export const getServicesForLocation = (locationId: string) =>
 /**
  * Services currently NOT offered. Kept here (rather than deleted) so it's
  * clear these were deliberate decisions, not oversights, if the client asks.
- * Lashes and makeup are inactive; do not surface them anywhere on the site.
+ * Makeup is inactive; do not surface it anywhere on the site. Lashes was
+ * previously inactive too but is now a confirmed, active category — see
+ * `lashServices` above.
  */
-export const inactiveServiceCategories = ["lashes", "makeup"] as const;
+export const inactiveServiceCategories = ["makeup"] as const;
 
 /**
  * Feature flag for a future wig sales / product catalogue. Keep this off

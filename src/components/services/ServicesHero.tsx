@@ -19,8 +19,8 @@ export function ServicesHero() {
           Services &amp; Prices
         </h1>
         <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-          Elegant nail care at our core, with hair services available through our expanded
-          studio — all prices in South African Rand (ZAR).
+          Elegant nail care at our core, with hair and lash services available through our
+          expanded studio — all prices in South African Rand (ZAR).
         </p>
       </Container>
     </section>
