@@ -17,7 +17,7 @@ export function GalleryTeaser() {
         <SectionHeading
           eyebrow="Gallery"
           title="Our recent work"
-          subtitle="A glimpse of the studio — real client photos will appear here as they're added."
+          subtitle="A glimpse of recent nail art from The Nail Studio."
         />
 
         <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
