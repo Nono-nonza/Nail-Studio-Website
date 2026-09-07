@@ -1,16 +1,21 @@
+import Image from "next/image";
 import { business } from "@/data/business";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 
 export function AboutTeaser() {
   return (
     <section className="bg-brand-cream py-20 sm:py-28">
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-        <PlaceholderImage
-          label="Studio photo coming soon"
-          className="aspect-[4/5] w-full rounded-3xl"
-        />
+        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl">
+          <Image
+            src="/images/nails/16040525-4ec4-4ecd-b92e-1d0395aca238.JPG"
+            alt="Glossy nude nails with a fine dark ombre tip, styled among candles and flowers at The Nail Studio"
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
+        </div>
 
         <div>
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-terracotta-ink">

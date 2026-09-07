@@ -86,6 +86,10 @@ export interface Service {
   description?: string;
   /** Which location(s) currently perform this service — an internal/booking detail, not a public "choose your studio" split. */
   availableAt: LocationId[];
+  /** Approved client photo for this service. Only set once a suitable photo has been confirmed. */
+  image?: StudioImage;
+  /** Use instead of `image` when more than one approved photo exists for this service. */
+  images?: StudioImage[];
 }
 
 export interface GalleryImage {

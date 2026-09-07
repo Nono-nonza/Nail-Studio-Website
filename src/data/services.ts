@@ -25,6 +25,10 @@ export const nailServices: Service[] = [
     price: 230,
     priceLabel: "R230",
     availableAt: ["main", "extension"],
+    image: {
+      src: "/images/nails/28e23bc3-e004-4c4c-965f-0f3a464cdc8a.JPG",
+      alt: "Black gel pedicure with a white star accent nail, worn with strappy studded sandals",
+    },
   },
   {
     id: "acrylic-full-set",
@@ -50,6 +54,20 @@ export const nailServices: Service[] = [
     priceUnit: "per nail",
     priceLabel: "R15 per nail",
     availableAt: ["main", "extension"],
+    images: [
+      {
+        src: "/images/nails/8ec75da4-79c3-473d-996f-1c7afe620aeb.JPG",
+        alt: "Pastel pink, blue, orange and yellow abstract French-tip nail art",
+      },
+      {
+        src: "/images/nails/552d0da6-42cc-403b-8c71-61ecd331fa6a.JPG",
+        alt: "Bright red glossy nails with delicate gold chain nail art on an accent nail",
+      },
+      {
+        src: "/images/nails/9f518244-734e-4e20-9ab1-e6672fdfc21f.JPG",
+        alt: "Nude nails with a white daisy accent and tiny smiley-face details",
+      },
+    ],
   },
   {
     id: "nail-removal",

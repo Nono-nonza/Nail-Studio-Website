@@ -1,9 +1,9 @@
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 
 export function StudioTeaser() {
   return (
@@ -16,7 +16,15 @@ export function StudioTeaser() {
         />
 
         <div className="mt-14 overflow-hidden rounded-3xl border border-border-subtle bg-background lg:grid lg:grid-cols-2 lg:items-center">
-          <PlaceholderImage label="The Nail Studio" className="aspect-[4/3] w-full lg:aspect-auto lg:h-full" />
+          <div className="relative aspect-[4/3] w-full lg:aspect-auto lg:h-full">
+            <Image
+              src="/images/nails/5b866e71-c9a8-4f8f-b878-c38a283c679b.JPG"
+              alt="Glossy nude nails with delicate gold glitter tips, showcased at The Nail Studio"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
 
           <div className="p-8 sm:p-10">
             <div className="mb-4 flex flex-wrap gap-2">
