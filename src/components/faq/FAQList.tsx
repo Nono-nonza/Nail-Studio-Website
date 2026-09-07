@@ -17,7 +17,7 @@ export function FAQList({ groups }: { groups: FAQGroup[] }) {
             {group.title}
           </h2>
 
-          <div className="mt-5 divide-y divide-border-subtle overflow-hidden rounded-2xl bg-surface shadow-sm shadow-brand-brown/5">
+          <div className="shadow-clay mt-5 divide-y divide-border-subtle overflow-hidden rounded-2xl bg-gradient-to-br from-surface to-brand-cream/20">
             {group.items.map((item) => {
               const key = `${group.title}::${item.question}`;
               const isOpen = openKey === key;

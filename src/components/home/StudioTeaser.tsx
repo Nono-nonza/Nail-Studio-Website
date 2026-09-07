@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 
 export function StudioTeaser() {
   return (
-    <section className="bg-surface py-20 sm:py-28">
+    <section className="bg-gradient-to-br from-surface to-brand-cream/40 py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Our Studio"
@@ -15,7 +15,7 @@ export function StudioTeaser() {
           subtitle="Nail care is at the heart of The Nail Studio. We've since expanded to offer hair services too — all under the same roof, the same standard of care."
         />
 
-        <div className="mt-14 overflow-hidden rounded-3xl border border-border-subtle bg-background lg:grid lg:grid-cols-2 lg:items-center">
+        <div className="shadow-clay mt-14 overflow-hidden rounded-3xl border border-border-subtle bg-background lg:grid lg:grid-cols-2 lg:items-center">
           <div className="relative aspect-[4/3] w-full lg:aspect-auto lg:h-full">
             <Image
               src="/images/nails/5b866e71-c9a8-4f8f-b878-c38a283c679b.JPG"

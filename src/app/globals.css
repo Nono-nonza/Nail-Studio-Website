@@ -86,3 +86,35 @@ h4 {
   background: var(--color-sage-light);
   color: #ffffff;
 }
+
+/*
+ * Soft-clay depth treatment — a gentle dual shadow (light highlight +
+ * soft dark shadow) used sparingly on homepage card/image surfaces to
+ * read as softly puffed rather than flat. Uses only the existing surface
+ * white and brand-brown tokens — no new colours. Homepage-only trial;
+ * not applied site-wide.
+ */
+.shadow-clay {
+  box-shadow:
+    -8px -8px 20px rgba(255, 255, 255, 0.6),
+    10px 10px 24px color-mix(in srgb, var(--color-brown) 14%, transparent);
+}
+
+/* Same soft-clay language, scaled down for small elements (buttons, badges). */
+.shadow-clay-sm {
+  box-shadow:
+    -3px -3px 8px rgba(255, 255, 255, 0.6),
+    4px 4px 10px color-mix(in srgb, var(--color-brown) 16%, transparent);
+}
+
+/*
+ * Dark-background counterpart — the white highlight in .shadow-clay-sm reads
+ * as a glowing halo against a dark backdrop (e.g. the brown CTA band), so
+ * this uses a much dimmer highlight and a deeper dark-side shadow instead,
+ * for the same quiet depth without the glow.
+ */
+.shadow-clay-sm-dark {
+  box-shadow:
+    -3px -3px 8px rgba(255, 255, 255, 0.1),
+    4px 4px 10px rgba(0, 0, 0, 0.3);
+}

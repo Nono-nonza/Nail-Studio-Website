@@ -8,7 +8,7 @@ export function StudioBand() {
   const [heroImage] = mainLocation.gallery;
 
   return (
-    <section className="bg-brand-cream py-20 sm:py-28">
+    <section className="bg-gradient-to-br from-brand-cream to-brand-sand/40 py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="The Studio"
@@ -18,7 +18,7 @@ export function StudioBand() {
 
         <div className="mt-14">
           {heroImage ? (
-            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl">
+            <div className="shadow-clay relative aspect-[16/9] w-full overflow-hidden rounded-3xl">
               <Image
                 src={heroImage.src}
                 alt={heroImage.alt}
@@ -30,7 +30,7 @@ export function StudioBand() {
           ) : (
             <PlaceholderImage
               label="Studio photo coming soon"
-              className="aspect-[16/9] w-full rounded-3xl"
+              className="shadow-clay aspect-[16/9] w-full rounded-3xl"
             />
           )}
         </div>

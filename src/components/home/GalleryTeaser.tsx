@@ -23,7 +23,7 @@ export function GalleryTeaser() {
         <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
           {hasImages
             ? (tiles as typeof galleryImages).map((image) => (
-                <div key={image.id} className="aspect-square overflow-hidden rounded-2xl">
+                <div key={image.id} className="shadow-clay aspect-square overflow-hidden rounded-2xl">
                   <Image
                     src={image.src}
                     alt={image.alt}

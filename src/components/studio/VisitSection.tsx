@@ -15,7 +15,7 @@ export function VisitSection() {
           .join(", ");
 
   return (
-    <section className="bg-surface py-20 sm:py-28">
+    <section className="bg-gradient-to-br from-surface to-brand-cream/30 py-20 sm:py-28">
       <Container className="mx-auto max-w-2xl text-center">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-terracotta-ink">
           Visit &amp; Book

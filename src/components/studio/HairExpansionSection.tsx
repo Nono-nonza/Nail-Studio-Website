@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 
 export function HairExpansionSection() {
   return (
-    <section className="bg-brand-cream py-20 sm:py-28">
+    <section className="bg-gradient-to-br from-brand-cream to-brand-sand/40 py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Expanded Services"

@@ -22,7 +22,7 @@ export default function GalleryPage() {
     <>
       <GalleryHero />
 
-      <section className="bg-surface py-20 sm:py-28">
+      <section className="bg-gradient-to-br from-surface to-brand-cream/30 py-20 sm:py-28">
         <Container>
           <SectionHeading
             eyebrow="Nail Work"
@@ -40,7 +40,7 @@ export default function GalleryPage() {
 
       <StudioBand />
 
-      <section className="bg-surface py-20 sm:py-28">
+      <section className="bg-gradient-to-br from-surface to-brand-cream/30 py-20 sm:py-28">
         <Container>
           <SectionHeading
             eyebrow="Hair Services"

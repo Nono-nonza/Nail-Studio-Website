@@ -5,11 +5,11 @@ import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 
 export function OwnerIntro() {
   return (
-    <section className="bg-surface py-20 sm:py-28">
+    <section className="bg-gradient-to-br from-surface to-brand-cream/40 py-20 sm:py-28">
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <PlaceholderImage
           label="Photo of Zanele Nkosi coming soon"
-          className="aspect-[4/5] w-full rounded-3xl"
+          className="shadow-clay aspect-[4/5] w-full rounded-3xl"
         />
 
         <div>

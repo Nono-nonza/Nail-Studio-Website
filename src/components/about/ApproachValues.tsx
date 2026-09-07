@@ -43,7 +43,7 @@ export function ApproachValues() {
           {values.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="rounded-3xl bg-surface p-7 shadow-sm shadow-brand-brown/5"
+              className="shadow-clay rounded-3xl bg-gradient-to-br from-surface to-brand-cream/30 p-7"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-sage-light/30 text-brand-sage">
                 <Icon className="h-5 w-5" aria-hidden />

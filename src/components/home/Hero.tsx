@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/Badge";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden bg-gradient-to-br from-brand-cream via-brand-cream to-brand-sand/60">
       <div
         aria-hidden
         className="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-brand-sage-light/40 blur-3xl"

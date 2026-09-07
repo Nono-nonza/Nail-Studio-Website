@@ -21,7 +21,12 @@ export function ServicePriceSection({
 }: ServicePriceSectionProps) {
   return (
     <section
-      className={cn("py-20 sm:py-28", background === "cream" ? "bg-brand-cream" : "bg-surface")}
+      className={cn(
+        "py-20 sm:py-28",
+        background === "cream"
+          ? "bg-gradient-to-br from-brand-cream to-brand-sand/40"
+          : "bg-gradient-to-br from-surface to-brand-cream/30"
+      )}
     >
       <Container>
         <SectionHeading eyebrow={eyebrow} title={title} subtitle={subtitle} />

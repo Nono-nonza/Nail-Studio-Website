@@ -16,7 +16,7 @@ function CardShell({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-3xl bg-surface p-7 shadow-sm shadow-brand-brown/5">
+    <div className="shadow-clay rounded-3xl bg-gradient-to-br from-surface to-brand-cream/30 p-7">
       <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-sage-light/30 text-brand-sage">
         <Icon className="h-5 w-5" aria-hidden />
       </div>
@@ -35,7 +35,7 @@ export function ContactDetails() {
           .join(", ");
 
   return (
-    <section className="bg-brand-cream py-20 sm:py-28">
+    <section className="bg-gradient-to-br from-brand-cream to-brand-sand/40 py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Contact Details"

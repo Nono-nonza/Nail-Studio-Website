@@ -28,7 +28,7 @@ export function BookingInfo() {
   ];
 
   return (
-    <section className="bg-brand-cream py-20 sm:py-28">
+    <section className="bg-gradient-to-br from-brand-cream to-brand-sand/40 py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Booking Information"
@@ -38,7 +38,7 @@ export function BookingInfo() {
 
         <div className="mx-auto mt-14 grid max-w-3xl gap-6 sm:grid-cols-2">
           {items.map(({ icon: Icon, title, description }) => (
-            <div key={title} className="flex gap-4 rounded-2xl bg-surface p-6 shadow-sm shadow-brand-brown/5">
+            <div key={title} className="shadow-clay flex gap-4 rounded-2xl bg-gradient-to-br from-surface to-brand-cream/30 p-6">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-sage-light/30 text-brand-sage">
                 <Icon className="h-5 w-5" aria-hidden />
               </div>

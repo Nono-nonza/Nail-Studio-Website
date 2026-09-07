@@ -69,7 +69,7 @@ export function BookingForm() {
       : undefined;
 
   return (
-    <div className="mx-auto max-w-2xl rounded-3xl bg-surface p-6 shadow-sm shadow-brand-brown/5 sm:p-10">
+    <div className="shadow-clay mx-auto max-w-2xl rounded-3xl bg-gradient-to-br from-surface to-brand-cream/20 p-6 sm:p-10">
       <form
         className="space-y-6"
         onSubmit={(event) => event.preventDefault()}
