@@ -11,7 +11,7 @@ export function OpeningHours({ hours, showHeading = true }: OpeningHoursProps) {
   const allTbd = hours.every((h) => h.hours === TBD);
 
   return (
-    <div>
+    <div className="@container">
       {showHeading ? (
         <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-brand-brown">
           <Clock className="h-4 w-4 text-brand-sage" />
@@ -27,7 +27,10 @@ export function OpeningHours({ hours, showHeading = true }: OpeningHoursProps) {
       ) : (
         <ul className="space-y-1 text-sm text-muted-foreground">
           {hours.map((entry) => (
-            <li key={entry.day} className="flex justify-between gap-6">
+            <li
+              key={entry.day}
+              className="flex flex-col gap-0.5 @[210px]:flex-row @[210px]:items-center @[210px]:justify-between @[210px]:gap-6"
+            >
               <span>{entry.day}</span>
               <span>{entry.hours === TBD ? "To be confirmed" : entry.hours}</span>
             </li>
