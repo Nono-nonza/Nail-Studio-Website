@@ -37,7 +37,7 @@ export function StudioTeaser() {
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
               Our core nail services — manicures, pedicures, acrylics, gel nails and nail art —
               remain at the centre of what we do. Through our expanded studio, we now also offer
-              hair services, from wig care to haircuts and colour.
+              hair services, from wig care to haircuts.
             </p>
             <div className="mt-6">
               <Button href="/our-studios" variant="outline" className="group">
