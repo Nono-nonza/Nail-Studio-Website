@@ -32,19 +32,19 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 min-[1100px]:flex">
-          {primaryNav.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="whitespace-nowrap text-sm font-medium text-brand-brown/80 transition-colors hover:text-brand-brown"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="hidden items-center gap-6 min-[1100px]:flex">
+          <nav className="flex items-center gap-6">
+            {primaryNav.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="whitespace-nowrap text-sm font-medium text-brand-brown/80 transition-colors hover:text-brand-brown"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
 
-        <div className="hidden min-[1100px]:block">
           <WhatsAppButton internationalNumber={primaryWhatsApp} className="whitespace-nowrap px-5 py-2.5 text-xs">
             Book Now
           </WhatsAppButton>
