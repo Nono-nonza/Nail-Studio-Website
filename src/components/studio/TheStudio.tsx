@@ -22,14 +22,14 @@ export function TheStudio() {
   return (
     <section className="bg-gradient-to-br from-surface to-brand-cream/40 py-20 sm:py-28">
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-        <div className="shadow-clay relative aspect-[4/5] w-full overflow-hidden rounded-3xl">
+        <div className="shadow-clay relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
           <div className="relative h-2/3 w-full">
             <Image
               src={studioPhotos[0].src}
               alt={studioPhotos[0].alt}
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
+              className="photo-warm object-cover"
             />
           </div>
           <div className="relative h-1/3 w-full border-t-4 border-surface">
@@ -38,7 +38,7 @@ export function TheStudio() {
               alt={studioPhotos[1].alt}
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
+              className="photo-warm object-cover"
             />
           </div>
         </div>

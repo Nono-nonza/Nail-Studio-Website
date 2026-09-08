@@ -118,3 +118,14 @@ h4 {
     -3px -3px 8px rgba(255, 255, 255, 0.1),
     4px 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+/*
+ * Consistent warm colour grading applied to every real client photo
+ * site-wide, so photos shot in different sessions (different backgrounds,
+ * lighting, warmth) read as one cohesive set. Subtle and uniform — the
+ * same filter everywhere, no per-photo adjustment. Never applied to
+ * PlaceholderImage boxes (those aren't real photos).
+ */
+.photo-warm {
+  filter: sepia(6%) saturate(1.1) hue-rotate(-2deg) brightness(1.02) contrast(1.02);
+}

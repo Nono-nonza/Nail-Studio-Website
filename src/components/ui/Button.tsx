@@ -17,7 +17,7 @@ function variantStyles(tone: ButtonTone): Record<ButtonVariant, string> {
 }
 
 const baseStyles =
-  "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-wide transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50";
+  "inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm font-medium tracking-wide transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50";
 
 interface CommonProps {
   variant?: ButtonVariant;

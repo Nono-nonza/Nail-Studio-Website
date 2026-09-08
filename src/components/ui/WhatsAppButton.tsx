@@ -25,7 +25,7 @@ export function WhatsAppButton({
     return (
       <span
         className={cn(
-          "inline-flex items-center justify-center gap-2 rounded-full border border-dashed border-brand-brown/30 px-6 py-3 text-sm font-medium tracking-wide text-muted-foreground",
+          "inline-flex items-center justify-center gap-2 rounded-2xl border border-dashed border-brand-brown/30 px-6 py-3 text-sm font-medium tracking-wide text-muted-foreground",
           className
         )}
         title="WhatsApp number to be confirmed"

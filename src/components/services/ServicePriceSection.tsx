@@ -46,26 +46,26 @@ export function ServicePriceSection({
                     {service.images.map((img) => (
                       <div
                         key={img.src}
-                        className="relative h-10 w-10 overflow-hidden rounded-lg ring-2 ring-background sm:h-12 sm:w-12"
+                        className="relative h-10 w-10 overflow-hidden rounded-2xl ring-2 ring-background sm:h-12 sm:w-12"
                       >
                         <Image
                           src={img.src}
                           alt={img.alt}
                           fill
                           sizes="48px"
-                          className="object-cover"
+                          className="photo-warm object-cover"
                         />
                       </div>
                     ))}
                   </div>
                 ) : service.image ? (
-                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-lg sm:h-14 sm:w-14">
+                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-2xl sm:h-14 sm:w-14">
                     <Image
                       src={service.image.src}
                       alt={service.image.alt}
                       fill
                       sizes="56px"
-                      className="object-cover"
+                      className="photo-warm object-cover"
                     />
                   </div>
                 ) : null}

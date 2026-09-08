@@ -15,14 +15,14 @@ export function StudioTeaser() {
           subtitle="Nail care is at the heart of The Nail Studio. We've since expanded to offer hair services too — all under the same roof, the same standard of care."
         />
 
-        <div className="shadow-clay mt-14 overflow-hidden rounded-3xl border border-border-subtle bg-background lg:grid lg:grid-cols-2 lg:items-center">
+        <div className="shadow-clay mt-14 overflow-hidden rounded-2xl border border-border-subtle bg-background lg:grid lg:grid-cols-2 lg:items-center">
           <div className="relative aspect-[4/3] w-full lg:aspect-auto lg:h-full">
             <Image
               src="/images/nails/5b866e71-c9a8-4f8f-b878-c38a283c679b.JPG"
               alt="Glossy nude nails with delicate gold glitter tips, showcased at The Nail Studio"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
+              className="photo-warm object-cover"
             />
           </div>
 

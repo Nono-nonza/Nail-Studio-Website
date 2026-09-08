@@ -19,7 +19,7 @@ export function GalleryGrid({ images, fallbackLabels }: GalleryGridProps) {
               alt={image.alt}
               fill
               sizes="(min-width: 640px) 33vw, 50vw"
-              className="object-cover"
+              className="photo-warm object-cover"
             />
           </div>
         ))}

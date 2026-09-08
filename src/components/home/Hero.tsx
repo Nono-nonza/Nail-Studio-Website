@@ -1,7 +1,9 @@
 import { business } from "@/data/business";
+import { mainLocation } from "@/data/locations";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 export function Hero() {
   return (
@@ -27,13 +29,18 @@ export function Hero() {
           services in a calm, welcoming studio experience — owned and run by {business.owner}.
         </p>
 
-        <div className="flex flex-col gap-3 sm:flex-row">
-          <Button href="/booking" variant="primary">
-            Request a Booking
+        <div className="flex flex-col items-center gap-3 sm:flex-row">
+          <Button href="/booking" variant="primary" className="px-8 py-4 text-base">
+            Book an Appointment
           </Button>
-          <Button href="/services" variant="outline">
-            View Services &amp; Prices
-          </Button>
+          <WhatsAppButton
+            internationalNumber={mainLocation.whatsapp.internationalNumber}
+            message="Hi, I'd like to enquire about an appointment."
+            variant="outline"
+            className="px-4 py-2 text-xs"
+          >
+            WhatsApp Us
+          </WhatsAppButton>
         </div>
       </Container>
     </section>

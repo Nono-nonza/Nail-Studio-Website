@@ -29,7 +29,7 @@ export function GalleryTeaser() {
                     alt={image.alt}
                     width={400}
                     height={400}
-                    className="h-full w-full object-cover"
+                    className="photo-warm h-full w-full object-cover"
                   />
                 </div>
               ))
