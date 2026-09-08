@@ -23,9 +23,8 @@
    */
   --color-olive-ink: #686143; /* muted body text on cream: 4.57:1 (was 3.71:1) */
   --color-terracotta-ink: #855543; /* eyebrow/accent text on cream: 4.57:1 (was 2.52:1) */
-  --color-sage-cta: #6f7859; /* primary button bg w/ white text: 4.66:1 (was 3.18:1) */
+  --color-sage-cta: #6f7859; /* the one primary button colour, sitewide: 4.66:1 (was 3.18:1) */
   --color-sage-cta-hover: #5c644a; /* primary button hover: 6.22:1 */
-  --color-terracotta-cta: #a36852; /* secondary button bg w/ white text: 4.51:1 (was 3.42:1) */
 
   --background: var(--color-cream);
   --foreground: var(--color-brown);
@@ -33,8 +32,6 @@
   --surface-muted: var(--color-sand);
   --primary: var(--color-sage-cta);
   --primary-foreground: #ffffff;
-  --accent: var(--color-terracotta-cta);
-  --accent-foreground: #ffffff;
   --muted-foreground: var(--color-olive-ink);
   --border-subtle: color-mix(in srgb, var(--color-brown) 15%, transparent);
 }
@@ -46,8 +43,6 @@
   --color-surface-muted: var(--surface-muted);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
   --color-muted-foreground: var(--muted-foreground);
   --color-border-subtle: var(--border-subtle);
 
@@ -89,10 +84,10 @@ h4 {
 
 /*
  * Soft-clay depth treatment — a gentle dual shadow (light highlight +
- * soft dark shadow) used sparingly on homepage card/image surfaces to
- * read as softly puffed rather than flat. Uses only the existing surface
- * white and brand-brown tokens — no new colours. Homepage-only trial;
- * not applied site-wide.
+ * soft dark shadow) applied sitewide to card and image surfaces so they
+ * read as sitting on a polished surface rather than flat on the page.
+ * Uses only the existing surface white and brand-brown tokens — no new
+ * colours.
  */
 .shadow-clay {
   box-shadow:
@@ -105,6 +100,17 @@ h4 {
   box-shadow:
     -3px -3px 8px rgba(255, 255, 255, 0.6),
     4px 4px 10px color-mix(in srgb, var(--color-brown) 16%, transparent);
+  transition:
+    box-shadow 220ms ease,
+    transform 220ms ease;
+}
+
+/* Gentle hover lift for buttons — a softer, larger shadow, not a colour swap alone. */
+.shadow-clay-sm:hover {
+  box-shadow:
+    -4px -4px 10px rgba(255, 255, 255, 0.5),
+    6px 12px 22px color-mix(in srgb, var(--color-brown) 20%, transparent);
+  transform: translateY(-1px);
 }
 
 /*
@@ -117,6 +123,50 @@ h4 {
   box-shadow:
     -3px -3px 8px rgba(255, 255, 255, 0.1),
     4px 4px 10px rgba(0, 0, 0, 0.3);
+  transition:
+    box-shadow 220ms ease,
+    transform 220ms ease;
+}
+
+.shadow-clay-sm-dark:hover {
+  box-shadow:
+    -4px -4px 10px rgba(255, 255, 255, 0.14),
+    6px 12px 22px rgba(0, 0, 0, 0.38);
+  transform: translateY(-1px);
+}
+
+/*
+ * Glossy button fill — a soft top-to-bottom sheen layered over the button's
+ * own background colour (set separately via bg-primary etc.), lighter near
+ * the top edge and settling to the true colour by mid-height. Reads as
+ * polished lacquer rather than a flat block of colour.
+ */
+.btn-glossy {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.32) 0%,
+    rgba(255, 255, 255, 0.08) 45%,
+    rgba(255, 255, 255, 0) 75%
+  );
+}
+
+/*
+ * Gloss sheen for photo containers — a barely-there highlight along the top
+ * edge, echoing how light catches polished nail lacquer. Sits on the wrapper
+ * (which already clips to rounded corners via overflow-hidden) so it never
+ * needs its own border radius handling.
+ */
+.photo-sheen {
+  position: relative;
+}
+
+.photo-sheen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0) 32%);
 }
 
 /*

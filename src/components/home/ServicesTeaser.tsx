@@ -17,7 +17,7 @@ function ServiceRow({ service }: { service: Service }) {
 
 export function ServicesTeaser() {
   return (
-    <section className="py-20 sm:py-28">
+    <section className="bg-gradient-to-br from-brand-cream to-brand-sand/40 py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Services & Prices"

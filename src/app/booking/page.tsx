@@ -18,7 +18,7 @@ export default function BookingPage() {
       <BookingHero />
       <HowItWorks />
 
-      <section className="py-20 sm:py-28">
+      <section className="bg-gradient-to-br from-surface to-brand-cream/30 py-20 sm:py-28">
         <Container>
           <SectionHeading
             eyebrow="Choose Your Service"

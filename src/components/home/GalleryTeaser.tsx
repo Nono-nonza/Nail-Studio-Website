@@ -12,7 +12,7 @@ export function GalleryTeaser() {
   const tiles = hasImages ? galleryImages.slice(0, 4) : placeholderLabels;
 
   return (
-    <section className="py-20 sm:py-28">
+    <section className="bg-gradient-to-br from-surface to-brand-cream/30 py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Gallery"
@@ -23,7 +23,7 @@ export function GalleryTeaser() {
         <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
           {hasImages
             ? (tiles as typeof galleryImages).map((image) => (
-                <div key={image.id} className="shadow-clay aspect-square overflow-hidden rounded-2xl">
+                <div key={image.id} className="shadow-clay photo-sheen relative aspect-square overflow-hidden rounded-2xl">
                   <Image
                     src={image.src}
                     alt={image.alt}

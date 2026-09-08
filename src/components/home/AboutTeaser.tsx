@@ -7,7 +7,7 @@ export function AboutTeaser() {
   return (
     <section className="bg-gradient-to-br from-brand-cream to-brand-sand/50 py-20 sm:py-28">
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-        <div className="shadow-clay relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
+        <div className="shadow-clay photo-sheen relative aspect-[4/5] w-full overflow-hidden rounded-2xl">
           <Image
             src="/images/nails/16040525-4ec4-4ecd-b92e-1d0395aca238.JPG"
             alt="Glossy nude nails with a fine dark ombre tip, styled among candles and flowers at The Nail Studio"
@@ -30,7 +30,7 @@ export function AboutTeaser() {
             hair.
           </p>
           <div className="mt-8">
-            <Button href="/about" variant="secondary">
+            <Button href="/about" variant="outline">
               Learn Our Story
             </Button>
           </div>

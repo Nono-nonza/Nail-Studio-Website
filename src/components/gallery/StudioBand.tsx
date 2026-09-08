@@ -18,7 +18,7 @@ export function StudioBand() {
 
         <div className="mt-14">
           {heroImage ? (
-            <div className="shadow-clay relative aspect-[16/9] w-full overflow-hidden rounded-2xl">
+            <div className="shadow-clay photo-sheen relative aspect-[16/9] w-full overflow-hidden rounded-2xl">
               <Image
                 src={heroImage.src}
                 alt={heroImage.alt}

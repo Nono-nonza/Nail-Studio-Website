@@ -13,7 +13,7 @@ export function GalleryGrid({ images, fallbackLabels }: GalleryGridProps) {
     return (
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5">
         {images.map((image) => (
-          <div key={image.id} className="shadow-clay relative aspect-[4/5] overflow-hidden rounded-2xl">
+          <div key={image.id} className="shadow-clay photo-sheen relative aspect-[4/5] overflow-hidden rounded-2xl">
             <Image
               src={image.src}
               alt={image.alt}

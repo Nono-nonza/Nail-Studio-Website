@@ -15,7 +15,7 @@ export default function FAQPage() {
   return (
     <>
       <FAQHero />
-      <section className="bg-brand-cream py-20 sm:py-28">
+      <section className="bg-gradient-to-br from-brand-cream to-brand-sand/40 py-20 sm:py-28">
         <Container>
           <FAQList groups={faqGroups} />
         </Container>

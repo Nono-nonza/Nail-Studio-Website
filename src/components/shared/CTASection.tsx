@@ -12,7 +12,7 @@ export function CTASection() {
           Send a booking request in under a minute — choose your service and preferred time, and
           we&apos;ll confirm with you on WhatsApp.
         </p>
-        <Button href="/booking" variant="secondary" tone="dark">
+        <Button href="/booking" variant="primary" tone="dark">
           Request a Booking
         </Button>
       </Container>

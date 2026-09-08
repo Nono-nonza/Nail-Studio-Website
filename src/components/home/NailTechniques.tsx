@@ -34,7 +34,7 @@ const techniques = [
 
 export function NailTechniques() {
   return (
-    <section className="py-20 sm:py-28">
+    <section className="bg-gradient-to-br from-surface to-brand-cream/30 py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Nail Techniques"

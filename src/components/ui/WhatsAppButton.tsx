@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 interface WhatsAppButtonProps {
   internationalNumber: string | typeof TBD | undefined;
   message?: string;
-  variant?: "primary" | "secondary" | "outline" | "ghost";
+  variant?: "primary" | "outline" | "ghost";
   className?: string;
   children?: React.ReactNode;
 }

@@ -31,14 +31,11 @@ export function ServicePriceSection({
       <Container>
         <SectionHeading eyebrow={eyebrow} title={title} subtitle={subtitle} />
 
-        <div className="mx-auto mt-14 grid max-w-4xl gap-x-12 sm:grid-cols-2">
+        <div className="mx-auto mt-14 grid max-w-4xl gap-4 sm:grid-cols-2 sm:gap-5">
           {services.map((service) => (
             <div
               key={service.id}
-              className={cn(
-                "flex items-start justify-between gap-4 py-4",
-                background === "cream" ? "border-b border-brand-brown/10" : "border-b border-border-subtle"
-              )}
+              className="shadow-clay-sm flex items-start justify-between gap-4 rounded-2xl bg-gradient-to-br from-surface to-brand-cream/20 p-4"
             >
               <div className="flex items-start gap-3">
                 {service.images && service.images.length > 0 ? (

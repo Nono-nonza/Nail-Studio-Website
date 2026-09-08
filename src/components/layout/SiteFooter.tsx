@@ -18,7 +18,7 @@ export function SiteFooter() {
   const confirmedSocials = socialLinks.filter((s) => s.href && s.href !== TBD);
 
   return (
-    <footer className="border-t border-border-subtle bg-brand-cream">
+    <footer className="border-t border-border-subtle bg-gradient-to-b from-brand-cream to-brand-sand/30">
       <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-3">
         <div>
           <p className="font-display text-lg font-semibold text-brand-brown">{business.name}</p>

@@ -16,7 +16,7 @@ export function StudioTeaser() {
         />
 
         <div className="shadow-clay mt-14 overflow-hidden rounded-2xl border border-border-subtle bg-background lg:grid lg:grid-cols-2 lg:items-center">
-          <div className="relative aspect-[4/3] w-full lg:aspect-auto lg:h-full">
+          <div className="photo-sheen relative aspect-[4/3] w-full lg:aspect-auto lg:h-full">
             <Image
               src="/images/nails/5b866e71-c9a8-4f8f-b878-c38a283c679b.JPG"
               alt="Glossy nude nails with delicate gold glitter tips, showcased at The Nail Studio"

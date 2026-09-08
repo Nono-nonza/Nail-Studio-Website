@@ -10,7 +10,7 @@ export function FeaturedService() {
   return (
     <section className="bg-gradient-to-br from-brand-cream to-brand-sand/40 py-20 sm:py-28">
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-        <div className="shadow-clay relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-2xl">
+        <div className="shadow-clay photo-sheen relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-2xl">
           <Image
             src={featuredPhoto.src}
             alt={featuredPhoto.alt}

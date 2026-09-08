@@ -1,16 +1,20 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "outline" | "ghost";
+type ButtonVariant = "primary" | "outline" | "ghost";
 /** "dark" swaps the soft-clay shadow for one tuned for dark backgrounds
  * (e.g. the brown CTA band) so the light highlight doesn't read as a glow. */
 type ButtonTone = "light" | "dark";
 
+/**
+ * One consistent primary colour (sage) and one consistent secondary/outline
+ * style, used for every CTA sitewide regardless of which page or section
+ * it appears in.
+ */
 function variantStyles(tone: ButtonTone): Record<ButtonVariant, string> {
   const shadow = tone === "dark" ? "shadow-clay-sm-dark" : "shadow-clay-sm";
   return {
-    primary: `${shadow} bg-primary text-primary-foreground hover:bg-sage-cta-hover`,
-    secondary: `${shadow} bg-accent text-accent-foreground hover:opacity-90`,
+    primary: `btn-glossy ${shadow} bg-primary text-primary-foreground hover:bg-sage-cta-hover`,
     outline: `${shadow} border border-brand-brown/30 text-foreground hover:bg-brand-brown/5`,
     ghost: "text-foreground hover:bg-brand-brown/5",
   };
