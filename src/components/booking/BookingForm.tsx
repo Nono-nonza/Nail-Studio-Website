@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { nailServices, hairServices, lashServices } from "@/data/services";
+import { nailServices, hairServices, lashServices, makeupServices } from "@/data/services";
 import { extensionLocation, mainLocation } from "@/data/locations";
 import { bookingConfig } from "@/data/booking";
 import { buildBookingMessage } from "@/lib/whatsapp";
@@ -43,18 +43,20 @@ export function BookingForm() {
     return toIsoDate(max);
   }, [today]);
 
-  const selectedService = [...nailServices, ...hairServices, ...lashServices].find(
+  const selectedService = [...nailServices, ...hairServices, ...lashServices, ...makeupServices].find(
     (s) => s.id === serviceId
   );
   const isComplete = Boolean(
     selectedService && date && time && name.trim() && whatsappNumber.trim()
   );
 
-  // Nail services go to the main WhatsApp line; hair and lash services go to
-  // the expanded studio's line. This is booking-flow routing only — the
-  // customer never sees or chooses between "studios".
+  // Nail services go to the main WhatsApp line; hair, lash and makeup
+  // services go to the expanded studio's line. This is booking-flow routing
+  // only — the customer never sees or chooses between "studios".
   const destinationWhatsApp =
-    selectedService?.category === "hair" || selectedService?.category === "lashes"
+    selectedService?.category === "hair" ||
+    selectedService?.category === "lashes" ||
+    selectedService?.category === "makeup"
       ? extensionLocation.whatsapp.internationalNumber
       : mainLocation.whatsapp.internationalNumber;
 
@@ -105,6 +107,13 @@ export function BookingForm() {
             </optgroup>
             <optgroup label="Lash Services">
               {lashServices.map((service) => (
+                <option key={service.id} value={service.id}>
+                  {service.name} — {service.priceLabel}
+                </option>
+              ))}
+            </optgroup>
+            <optgroup label="Makeup Services">
+              {makeupServices.map((service) => (
                 <option key={service.id} value={service.id}>
                   {service.name} — {service.priceLabel}
                 </option>

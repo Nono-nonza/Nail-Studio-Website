@@ -137,6 +137,39 @@ export const hairServices: Service[] = [
     priceLabel: "R150",
     availableAt: ["extension"],
   },
+  {
+    id: "braids-box-braids",
+    name: "Braids / Box Braids",
+    category: "hair",
+    price: 350,
+    priceLabel: "From R350",
+    availableAt: ["extension"],
+  },
+  {
+    id: "weave-sew-in",
+    name: "Weave / Sew-In",
+    category: "hair",
+    price: 450,
+    priceLabel: "R450",
+    description: "Client provides own hairpiece.",
+    availableAt: ["extension"],
+  },
+  {
+    id: "natural-hair-styling",
+    name: "Natural Hair Styling",
+    category: "hair",
+    price: 250,
+    priceLabel: "R250",
+    availableAt: ["extension"],
+  },
+  {
+    id: "revamp",
+    name: "Revamp",
+    category: "hair",
+    price: 350,
+    priceLabel: "R350",
+    availableAt: ["extension"],
+  },
 ];
 
 export const lashServices: Service[] = [
@@ -182,7 +215,39 @@ export const lashServices: Service[] = [
   },
 ];
 
-export const allServices: Service[] = [...nailServices, ...hairServices, ...lashServices];
+export const makeupServices: Service[] = [
+  {
+    id: "full-face-makeup",
+    name: "Full Face Makeup",
+    category: "makeup",
+    price: 450,
+    priceLabel: "R450",
+    availableAt: ["extension"],
+  },
+  {
+    id: "bridal-makeup",
+    name: "Bridal Makeup",
+    category: "makeup",
+    price: 650,
+    priceLabel: "R650",
+    availableAt: ["extension"],
+  },
+  {
+    id: "everyday-makeup",
+    name: "Natural / Everyday Look",
+    category: "makeup",
+    price: 350,
+    priceLabel: "R350",
+    availableAt: ["extension"],
+  },
+];
+
+export const allServices: Service[] = [
+  ...nailServices,
+  ...hairServices,
+  ...lashServices,
+  ...makeupServices,
+];
 
 export const getServicesForLocation = (locationId: string) =>
   allServices.filter((service) => service.availableAt.includes(locationId as never));
@@ -190,11 +255,10 @@ export const getServicesForLocation = (locationId: string) =>
 /**
  * Services currently NOT offered. Kept here (rather than deleted) so it's
  * clear these were deliberate decisions, not oversights, if the client asks.
- * Makeup is inactive; do not surface it anywhere on the site. Lashes was
- * previously inactive too but is now a confirmed, active category — see
- * `lashServices` above.
+ * Both Lashes and Makeup were previously inactive but are now confirmed,
+ * active categories — see `lashServices` and `makeupServices` above.
  */
-export const inactiveServiceCategories = ["makeup"] as const;
+export const inactiveServiceCategories = [] as const;
 
 /**
  * Feature flag for a future wig sales / product catalogue. Keep this off
