@@ -130,11 +130,12 @@ export const hairServices: Service[] = [
     availableAt: ["extension"],
   },
   {
-    id: "dye",
-    name: "Dye",
+    id: "haircut-and-dye",
+    name: "Haircut & Dye",
     category: "hair",
     price: 150,
     priceLabel: "R150",
+    description: "Dye is only offered combined with a haircut, not as a standalone service.",
     availableAt: ["extension"],
   },
   {
