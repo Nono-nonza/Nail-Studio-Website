@@ -13,9 +13,8 @@ export const business = {
   currency: "ZAR",
   currencySymbol: "R",
   country: "South Africa",
-  /** Update once the client provides a final logo file. */
   logo: {
-    src: TBD,
+    src: "/images/logo/the-nail-studio-logo-transparent.png",
     alt: "The Nail Studio logo",
   },
   /** Primary contact email, if the client wants one published. */
